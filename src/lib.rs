@@ -1,6 +1,8 @@
 mod app;
+mod api;
 mod route;
 mod pages;
+mod types;
 mod components;
 
 use wasm_bindgen::prelude::*;
