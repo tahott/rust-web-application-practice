@@ -3,6 +3,7 @@ use yew_router::prelude::*;
 
 use crate::pages::{Home, Profile};
 use crate::route::Route;
+use crate::components::NavBar;
 
 pub struct App {}
 
@@ -25,14 +26,15 @@ impl Component for App {
   type Message = ();
   type Properties = ();
 
-  fn create(ctx: &Context<Self>) -> Self {
+  fn create(_ctx: &Context<Self>) -> Self {
     Self {}
   }
 
-  fn view(&self, ctx: &Context<Self>) -> Html {
+  fn view(&self, _ctx: &Context<Self>) -> Html {
     html! {
       <div class="bg-[#1f2937] text-slate-50 min-w-[360px] h-screen md:min-w-[768px] lg:min-w-[1024px]" id="body">
         <BrowserRouter>
+          <NavBar />
           <Switch<Route> render={Switch::render(switch)} />
         </BrowserRouter>
       </div>
