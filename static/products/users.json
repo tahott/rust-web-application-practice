@@ -1,27 +1,52 @@
 [
   {
     "id": 1,
-    "nick": "백이진",
-    "company": ""
+    "name": "백이진",
+    "career": [
+      {
+        "name": "A-company",
+        "in_date": "2022.02",
+        "out_date": "?",
+        "job": "백엔드 개발자"
+      },
+      {
+        "name": "B-company",
+        "in_date": "2016.02",
+        "out_date": "2022.01",
+        "job": "백엔드 개발자"
+      },
+      {
+        "name": "O-company",
+        "in_date": "2014.07",
+        "out_date": "2016.01",
+        "job": "백엔드 개발자"
+      },
+      {
+        "name": "R-company",
+        "in_date": "2012.05",
+        "out_date": "2014.05",
+        "job": "비개발자"
+      }
+    ]
   },
   {
     "id": 2,
-    "nick": "나희도",
-    "company": ""
+    "name": "나희도",
+    "career": []
   },
   {
     "id": 3,
-    "nick": "고유림",
-    "company": ""
+    "name": "고유림",
+    "career": []
   },
   {
     "id": 4,
-    "nick": "지승완",
-    "company": ""
+    "name": "지승완",
+    "career": []
   },
   {
     "id": 5,
-    "nick": "문지웅",
-    "company": ""
+    "name": "문지웅",
+    "career": []
   }
 ]

@@ -23,6 +23,11 @@ impl Component for NavBar {
             name="HOME"
           />
           <NavItem
+            route={Route::CareerPage}
+            icon="raphael:roadmap"
+            name="Career"
+          />
+          <NavItem
             route={Route::ProfilePage}
             icon="ant-design:user-outlined"
             name="My Profile"

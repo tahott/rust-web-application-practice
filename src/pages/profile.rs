@@ -1,6 +1,7 @@
 use yew::prelude::*;
 
-use crate::{api::{FetchError, get_user}, types::User};
+use crate::{api::{FetchError, get_user}, types::{User, Career}};
+use crate::components::CareerCard;
 
 pub enum FetchState<T> {
   NotFetching,
@@ -57,16 +58,20 @@ impl Component for Profile {
       FetchState::NotFetching => html! {},
       FetchState::Fetching => html! {},
       FetchState::Success(data) => {
+        let careers: Vec<Html> = data.career.iter().map(|career: &Career| {
+          html! {
+            <CareerCard career={career.clone()} />
+          }
+        }).collect();
+
         html! {
           <div class="lg:pr-48 lg:pl-48">
-            {data.nick.clone()}
+            {data.name.clone()}
+            <div class="rounded-b bg-gray-700 career_card_list flex flex-col m-2 mt-0 p-2 pt-0 pl-[16px] pr-[16px] md:grid grid-cols-12">{careers}</div>
           </div>
         }
       },
       FetchState::Failed(err) => html! { err },
     }
-    // html! {
-    //   "This page is profile"
-    // }
   }
 }

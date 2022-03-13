@@ -1,7 +1,7 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::pages::{Home, Profile};
+use crate::pages::{Home, Career, Profile};
 use crate::route::Route;
 use crate::components::NavBar;
 
@@ -14,6 +14,11 @@ fn switch(routes: &Route) -> Html {
         <Home />
       }
     },
+    Route::CareerPage => {
+      html! {
+        <Career />
+      }
+    }
     Route::ProfilePage => {
       html! {
         <Profile />
