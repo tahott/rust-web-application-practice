@@ -7,7 +7,7 @@ use crate::components::NavBar;
 
 pub struct App {}
 
-fn switch(routes: &Route) -> Html {
+fn switch(routes: Route) -> Html {
   match routes.clone() {
     Route::HomePage => {
       html! {
@@ -40,7 +40,7 @@ impl Component for App {
       <div class="bg-[#1f2937] text-slate-50 min-w-[360px] h-screen md:min-w-[768px] lg:min-w-[1024px]" id="body">
         <BrowserRouter>
           <NavBar />
-          <Switch<Route> render={Switch::render(switch)} />
+          <Switch<Route> render={switch} />
         </BrowserRouter>
       </div>
     }
