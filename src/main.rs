@@ -5,6 +5,6 @@ mod pages;
 mod types;
 mod components;
 
-pub fn run_app() {
+pub fn main() {
   yew::Renderer::<app::App>::new().render();
 }
